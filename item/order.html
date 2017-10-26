@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        header {
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 400px;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+
+        .column-reverse {
+            flex-direction: column-reverse;
+        }
+
+        .child {
+            width: 100px;
+            height: 100px;
+            border: 1px solid gray;
+            box-sizing: border-box;
+        }
+
+        .one {
+            order: 4;
+        }
+
+        .two {
+            order: 3;
+        }
+
+        .three {
+            order: 2;
+        }
+
+        .four {
+            order: 1;
+        }
+    </style>
+</head>
+<body>
+<header>order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。</header>
+<div class="container">
+    <div class="child one">one</div>
+    <div class="child two">two</div>
+    <div class="child three">three</div>
+    <div class="child four">four</div>
+</div>
+<div class="container column-reverse">
+    <div class="child four">four</div>
+    <div class="child one">one</div>
+    <div class="child two">two</div>
+    <div class="child three">three</div>
+    <div class="child four">four</div>
+</div>
+</body>
+</html>
